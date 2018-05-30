@@ -1,0 +1,76 @@
+.duck-sheep-chicken {
+  display: flex;
+  justify-content: space-between;
+  height: 22vh;
+}
+
+.duck {
+  width: 22vw;
+  background: url(../img/duck.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.duck--chat {
+  width: 22vw;
+  background: url(../img/duck.svg) no-repeat center center,
+    url(../img/chat-to-right.svg) no-repeat center right;
+  background-size: contain, 20%;
+}
+.sheep {
+  width: 22vw;
+  background: url(../img/sheep.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.sheep--chat {
+  width: 22vw;
+  background: url(../img/sheep.svg) no-repeat center center,
+    url(../img/chat-to-right.svg) no-repeat center right;
+  background-size: contain, 20%;
+}
+
+.chicken {
+  width: 22vw;
+  background: url(../img/chicken.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.chicken--chat {
+  width: 22vw;
+  background: url(../img/chicken.svg) no-repeat center center,
+    url(../img/chat-to-left.svg) no-repeat center left;
+  background-size: contain, 20%;
+}
+
+@media (min-height: 600px) {
+  .duck-sheep-chicken {
+    height: 18vh;
+  }
+}
+
+@media (min-height: 1000px) {
+  .duck-sheep-chicken {
+    height: 17vh;
+  }
+}
+
+@media (min-width: 800px) {
+  .duck {
+    width: 18vw;
+  }
+  .duck--chat {
+    width: 18vw;
+  }
+  .sheep {
+    width: 18vw;
+  }
+  .sheep--chat {
+    width: 18vw;
+  }
+  .chicken {
+    width: 18vw;
+  }
+  .chicken--chat {
+    width: 18vw;
+  }
+}
