@@ -6,9 +6,9 @@ import {
   watchPlayCowSound,
   watchPlayDogSound,
   watchPlayDuckSound,
-  watchPlaySheepSound
-  // watchPlayMusicStart,
-  // watchPlayMusicChange
+  watchPlaySheepSound,
+  watchPlayMusicStart,
+  watchPlayMusicChange
 } from "./watchers";
 
 export default function* rootSaga() {
@@ -18,8 +18,8 @@ export default function* rootSaga() {
     fork(watchPlayCowSound),
     fork(watchPlayDogSound),
     fork(watchPlayDuckSound),
-    fork(watchPlaySheepSound)
-    // fork(watchPlayMusicStart),
-    // fork(watchPlayMusicChange)
+    fork(watchPlaySheepSound),
+    fork(watchPlayMusicStart),
+    fork(watchPlayMusicChange)
   ]);
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { changeIsMusicOn } from "../actions/settings";
+// import { changeIsMusicOn } from "../actions/settings";
+import { changePlayMusic } from "../actions/saga";
 
-export const Header = ({ isMusicOn, changeIsMusicOn }) => (
+export const Header = ({ isMusicOn, changePlayMusic }) => (
   <div className="header">
     <div className="header__left" />
     <div>
@@ -11,7 +12,7 @@ export const Header = ({ isMusicOn, changeIsMusicOn }) => (
     <div className="music-logo">
       <div
         className={isMusicOn ? "music-logo--on" : "music-logo--off"}
-        onClick={changeIsMusicOn}
+        onClick={changePlayMusic}
       />
     </div>
   </div>
@@ -21,4 +22,4 @@ const mapStateToProps = state => ({
   isMusicOn: state.settings.isMusicOn
 });
 
-export default connect(mapStateToProps, { changeIsMusicOn })(Header);
+export default connect(mapStateToProps, { changePlayMusic })(Header);

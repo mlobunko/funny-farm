@@ -33,7 +33,8 @@ export const duckSoundPlay = () => duckSound.play();
 
 const musicTrack = new Howl({
   src: [music],
-  loop: true
+  loop: true,
+  volume: 0.4
 });
 
 export const musicPlay = () => musicTrack.play();

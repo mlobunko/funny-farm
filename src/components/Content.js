@@ -4,22 +4,30 @@ import Header from "./Header";
 import CowAndCat from "./CowAndCat";
 import Dog from "./Dog";
 import DuckSheepChicken from "./DuckSheepChicken";
+import { startPlayMusic } from "../actions/saga";
 
-export const Content = ({ isLandscape }) => (
-  <div>
-    {isLandscape ? (
-      <div className="content">
-        <Header />
-        <CowAndCat />
-        <Dog />
-        <DuckSheepChicken />
+export class Content extends React.Component {
+  componentDidMount = () => {
+    this.props.startPlayMusic();
+  };
+  render() {
+    return (
+      <div>
+        {this.props.isLandscape ? (
+          <div className="content">
+            <Header />
+            <CowAndCat />
+            <Dog />
+            <DuckSheepChicken />
+          </div>
+        ) : null}
       </div>
-    ) : null}
-  </div>
-);
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   isLandscape: state.settings.isLandscape
 });
 
-export default connect(mapStateToProps)(Content);
+export default connect(mapStateToProps, { startPlayMusic })(Content);

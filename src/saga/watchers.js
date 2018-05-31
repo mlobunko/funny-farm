@@ -86,24 +86,25 @@ export function* watchPlaySheepSound() {
   }
 }
 
-// export function* watchPlayMusicStart() {
-//   yield take("START_PLAY_MUSIC");
-//   const {
-//     settings: { isMusicOn }
-//   } = yield select();
-//   if (isMusicOn) yield call(musicPlay);
-// }
+export function* watchPlayMusicStart() {
+  yield take("START_PLAY_MUSIC");
+  const {
+    settings: { isMusicOn }
+  } = yield select();
+  if (isMusicOn) yield call(musicPlay);
+}
 
-// export function* watchPlayMusicChange() {
-//   while (true) {
-//     yield put(changeIsMusicOn());
-//     const {
-//       settings: { isMusicOn }
-//     } = yield select();
-//     if (isMusicOn) {
-//       yield fork(musicPlay);
-//     } else {
-//       yield fork(musicStop);
-//     }
-//   }
-// }
+export function* watchPlayMusicChange() {
+  while (true) {
+    yield take("CHANGE_PLAY_MUSIC");
+    yield put(changeIsMusicOn());
+    const {
+      settings: { isMusicOn }
+    } = yield select();
+    if (isMusicOn) {
+      yield fork(musicPlay);
+    } else {
+      yield fork(musicStop);
+    }
+  }
+}
