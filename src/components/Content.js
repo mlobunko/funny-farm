@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import Header from "./Header";
-import CowAndCat from "./CowAndCat";
+import TouchTheAnimal from "./TouchTheAnimal";
+import CowAnimalCat from "./CowAnimalCat";
 import Dog from "./Dog";
 import DuckSheepChicken from "./DuckSheepChicken";
 import { startPlayMusic } from "../actions/saga";
@@ -16,7 +17,8 @@ export class Content extends React.Component {
         {this.props.isLandscape ? (
           <div className="content">
             <Header />
-            <CowAndCat />
+            <TouchTheAnimal />
+            <CowAnimalCat />
             <Dog />
             <DuckSheepChicken />
           </div>

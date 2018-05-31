@@ -1,5 +1,4 @@
-import { delay } from "redux-saga";
-import { put, call, select, take, all, fork } from "redux-saga/effects";
+import { all, fork } from "redux-saga/effects";
 import {
   watchPlayCatSound,
   watchPlayChickenSound,

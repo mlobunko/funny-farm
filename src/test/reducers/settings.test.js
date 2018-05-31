@@ -15,7 +15,14 @@ import {
   sheepSoundPlayingTrue,
   sheepSoundPlayingFalse,
   chickenSoundPlayingTrue,
-  chickenSoundPlayingFalse
+  chickenSoundPlayingFalse,
+  clickedAnimalCat,
+  clickedAnimalChicken,
+  clickedAnimalCow,
+  clickedAnimalDog,
+  clickedAnimalDuck,
+  clickedAnimalSheep,
+  clickedAnimalNull
 } from "../../actions/settings";
 
 it("should set default state", () => {
@@ -162,5 +169,61 @@ it("should set isChickenSoundPlaying to false", () => {
   expect(state).toEqual({
     ...settingsReducerDefaultState,
     isChickenSoundPlaying: false
+  });
+});
+
+it("should set clickedAnimal to 'CAT'", () => {
+  const state = settings(undefined, clickedAnimalCat());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "CAT"
+  });
+});
+
+it("should set clickedAnimal to 'COW'", () => {
+  const state = settings(undefined, clickedAnimalCow());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "COW"
+  });
+});
+
+it("should set clickedAnimal to 'CHICKEN'", () => {
+  const state = settings(undefined, clickedAnimalChicken());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "ROOSTER"
+  });
+});
+
+it("should set clickedAnimal to 'DOG'", () => {
+  const state = settings(undefined, clickedAnimalDog());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "DOG"
+  });
+});
+
+it("should set clickedAnimal to 'DUCK'", () => {
+  const state = settings(undefined, clickedAnimalDuck());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "DUCK"
+  });
+});
+
+it("should set clickedAnimal to 'SHEEP'", () => {
+  const state = settings(undefined, clickedAnimalSheep());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: "SHEEP"
+  });
+});
+
+it("should set clickedAnimal to null", () => {
+  const state = settings(undefined, clickedAnimalNull());
+  expect(state).toEqual({
+    ...settingsReducerDefaultState,
+    clickedAnimal: null
   });
 });

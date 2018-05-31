@@ -1,0 +1,38 @@
+.touch-the-animal {
+  height: 9vh;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: LuckiestGuy;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  animation-name: blink-text;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes blink-text {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-height: 600px) {
+  .touch-the-animal {
+    height: 19vh;
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-height: 1000px) {
+  .touch-the-animal {
+    height: 25vh;
+  }
+}

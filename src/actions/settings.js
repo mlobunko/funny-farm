@@ -57,3 +57,31 @@ export const chickenSoundPlayingTrue = () => ({
 export const chickenSoundPlayingFalse = () => ({
   type: "CHICKEN_SOUND_PLAYING_FALSE"
 });
+
+export const clickedAnimalCat = () => ({
+  type: "CLICKED_ANIMAL_CAT"
+});
+
+export const clickedAnimalChicken = () => ({
+  type: "CLICKED_ANIMAL_CHICKEN"
+});
+
+export const clickedAnimalCow = () => ({
+  type: "CLICKED_ANIMAL_COW"
+});
+
+export const clickedAnimalDog = () => ({
+  type: "CLICKED_ANIMAL_DOG"
+});
+
+export const clickedAnimalDuck = () => ({
+  type: "CLICKED_ANIMAL_DUCK"
+});
+
+export const clickedAnimalSheep = () => ({
+  type: "CLICKED_ANIMAL_SHEEP"
+});
+
+export const clickedAnimalNull = () => ({
+  type: "CLICKED_ANIMAL_NULL"
+});

@@ -1,5 +1,5 @@
 import { Howl } from "howler";
-import cat from "../sound/cat.mp3";
+import cat from "../sound/cat.wav";
 import cow from "../sound/cow.mp3";
 import dog from "../sound/dog.wav";
 import duck from "../sound/duck.mp3";
@@ -34,7 +34,7 @@ export const duckSoundPlay = () => duckSound.play();
 const musicTrack = new Howl({
   src: [music],
   loop: true,
-  volume: 0.4
+  volume: 0.3
 });
 
 export const musicPlay = () => musicTrack.play();

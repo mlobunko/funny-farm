@@ -1,8 +1,8 @@
-.cow-and-cat {
+.cow-animal-cat {
   display: flex;
-  justify-content: space-around;
-  margin-top: 9vh;
+  justify-content: space-evenly;
   height: 22vh;
+  // align-items: center;
 }
 
 .cow {
@@ -17,7 +17,21 @@
     url(../img/chat-to-right.svg) no-repeat center right;
   background-size: contain, 20%;
 }
-
+.animal {
+  width: 15vw;
+  height: 40%;
+  border: 2px solid black;
+  border-radius: 10%;
+  background: white;
+  text-align: center;
+  font-family: LuckiestGuy;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 1px;
+  align-self: center;
+}
 .cat {
   width: 22vw;
   background: url(../img/cat.svg) no-repeat center center;
@@ -32,15 +46,13 @@
 }
 
 @media (min-height: 600px) {
-  .cow-and-cat {
-    margin-top: 19vh;
+  .cow-animal-cat {
     height: 18vh;
   }
 }
 
 @media (min-height: 1000px) {
-  .cow-and-cat {
-    margin-top: 25vh;
+  .cow-animal-cat {
     height: 17vh;
   }
 }
@@ -52,6 +64,9 @@
   .cow--chat {
     width: 18vw;
   }
+  // .animal {
+  //   width: 16vw;
+  // }
   .cat {
     width: 18vw;
   }

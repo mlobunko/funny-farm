@@ -6,7 +6,8 @@ export const settingsReducerDefaultState = {
   isDogSoundPlaying: false,
   isDuckSoundPlaying: false,
   isSheepSoundPlaying: false,
-  isChickenSoundPlaying: false
+  isChickenSoundPlaying: false,
+  clickedAnimal: null
 };
 
 export default (state = settingsReducerDefaultState, action) => {
@@ -85,6 +86,41 @@ export default (state = settingsReducerDefaultState, action) => {
       return {
         ...state,
         isChickenSoundPlaying: false
+      };
+    case "CLICKED_ANIMAL_CAT":
+      return {
+        ...state,
+        clickedAnimal: "CAT"
+      };
+    case "CLICKED_ANIMAL_COW":
+      return {
+        ...state,
+        clickedAnimal: "COW"
+      };
+    case "CLICKED_ANIMAL_CHICKEN":
+      return {
+        ...state,
+        clickedAnimal: "ROOSTER"
+      };
+    case "CLICKED_ANIMAL_DOG":
+      return {
+        ...state,
+        clickedAnimal: "DOG"
+      };
+    case "CLICKED_ANIMAL_DUCK":
+      return {
+        ...state,
+        clickedAnimal: "DUCK"
+      };
+    case "CLICKED_ANIMAL_SHEEP":
+      return {
+        ...state,
+        clickedAnimal: "SHEEP"
+      };
+    case "CLICKED_ANIMAL_NULL":
+      return {
+        ...state,
+        clickedAnimal: null
       };
     default:
       return state;

@@ -13,7 +13,14 @@ import {
   sheepSoundPlayingTrue,
   sheepSoundPlayingFalse,
   chickenSoundPlayingTrue,
-  chickenSoundPlayingFalse
+  chickenSoundPlayingFalse,
+  clickedAnimalCat,
+  clickedAnimalChicken,
+  clickedAnimalCow,
+  clickedAnimalDog,
+  clickedAnimalDuck,
+  clickedAnimalSheep,
+  clickedAnimalNull
 } from "../../actions/settings";
 
 it("should create an action LANDSCAPE_ON", () => {
@@ -119,4 +126,53 @@ it("should create an action CHICKEN_SOUND_PLAYING_FALSE", () => {
     type: "CHICKEN_SOUND_PLAYING_FALSE"
   };
   expect(chickenSoundPlayingFalse()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_CAT", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_CAT"
+  };
+  expect(clickedAnimalCat()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_CHICKEN", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_CHICKEN"
+  };
+  expect(clickedAnimalChicken()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_COW", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_COW"
+  };
+  expect(clickedAnimalCow()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_DOG", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_DOG"
+  };
+  expect(clickedAnimalDog()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_DUCK", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_DUCK"
+  };
+  expect(clickedAnimalDuck()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_SHEEP", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_SHEEP"
+  };
+  expect(clickedAnimalSheep()).toEqual(expectedAction);
+});
+
+it("should create an action CLICKED_ANIMAL_NULL", () => {
+  const expectedAction = {
+    type: "CLICKED_ANIMAL_NULL"
+  };
+  expect(clickedAnimalNull()).toEqual(expectedAction);
 });
