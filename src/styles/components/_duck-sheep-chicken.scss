@@ -54,23 +54,32 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1300px) {
   .duck {
-    width: 18vw;
+    width: 20vw;
   }
   .duck--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/duck.svg) no-repeat center center,
+      url(../img/chat-to-right.svg) no-repeat center right;
+    background-size: contain, 18%;
   }
   .sheep {
-    width: 18vw;
+    width: 20vw;
   }
   .sheep--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/sheep.svg) no-repeat center center,
+      url(../img/chat-to-right.svg) no-repeat center right;
+    background-size: contain, 18%;
   }
   .chicken {
-    width: 18vw;
+    width: 20vw;
   }
   .chicken--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/chicken.svg) no-repeat center center,
+      url(../img/chat-to-left.svg) no-repeat center left;
+    background-size: contain, 20%;
   }
 }

@@ -1,5 +1,5 @@
 import { delay } from "redux-saga";
-import { put, call, select, take, fork } from "redux-saga/effects";
+import { put, call, select, take, fork, takeLatest } from "redux-saga/effects";
 import {
   catSoundPlay,
   chickenSoundPlay,
@@ -29,8 +29,30 @@ import {
   clickedAnimalCow,
   clickedAnimalDog,
   clickedAnimalDuck,
-  clickedAnimalSheep
+  clickedAnimalSheep,
+  clickedAnimalNull
 } from "../actions/settings";
+
+export function* toClickedAnimalNull() {
+  yield call(delay, 4000);
+  yield put(clickedAnimalNull());
+}
+
+export function* watchClickedAnimal() {
+  while (true) {
+    yield takeLatest(
+      [
+        "PLAY_CAT_SOUND",
+        "PLAY_CHICKEN_SOUND",
+        "PLAY_COW_SOUND",
+        "PLAY_DOG_SOUND",
+        "PLAY_DUCK_SOUND",
+        "PLAY_SHEEP_SOUND"
+      ],
+      toClickedAnimalNull
+    );
+  }
+}
 
 export function* watchPlayCatSound() {
   while (true) {

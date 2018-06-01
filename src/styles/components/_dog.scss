@@ -29,11 +29,14 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1300px) {
   .dog__image {
-    width: 18vw;
+    width: 20vw;
   }
   .dog__image--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/dog.svg) no-repeat center center,
+      url(../img/chat-to-right.svg) no-repeat center right;
+    background-size: contain, 18%;
   }
 }

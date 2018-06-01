@@ -1,7 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const TouchTheAnimal = () => (
-  <div className="touch-the-animal">Touch The Animal</div>
+export const TouchTheAnimal = ({ clickedAnimal }) => (
+  <div>
+    {clickedAnimal ? (
+      <div className="touch-the-animal touch-the-animal__clicked-animal">
+        {clickedAnimal}
+      </div>
+    ) : (
+      <div className="touch-the-animal touch-the-animal--animation">
+        Touch The Animal
+      </div>
+    )}
+  </div>
 );
 
-export default TouchTheAnimal;
+const mapStateToProps = state => ({
+  clickedAnimal: state.settings.clickedAnimal
+});
+
+export default connect(mapStateToProps)(TouchTheAnimal);

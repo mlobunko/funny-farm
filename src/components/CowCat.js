@@ -6,17 +6,14 @@ const CowAndCat = ({
   playCatSound,
   playCowSound,
   isCatSoundPlaying,
-  isCowSoundPlaying,
-  clickedAnimal
+  isCowSoundPlaying
 }) => (
-  <div className="cow-animal-cat">
+  <div className="cow-cat">
     <div
       className={isCowSoundPlaying ? "cow--chat" : "cow"}
       onClick={playCowSound}
     />
-    <div className="animal">
-      <div>{clickedAnimal}</div>
-    </div>
+
     <div
       className={isCatSoundPlaying ? "cat--chat" : "cat"}
       onClick={playCatSound}
@@ -26,8 +23,7 @@ const CowAndCat = ({
 
 const mapStateToProps = state => ({
   isCowSoundPlaying: state.settings.isCowSoundPlaying,
-  isCatSoundPlaying: state.settings.isCatSoundPlaying,
-  clickedAnimal: state.settings.clickedAnimal
+  isCatSoundPlaying: state.settings.isCatSoundPlaying
 });
 
 export default connect(mapStateToProps, { playCatSound, playCowSound })(

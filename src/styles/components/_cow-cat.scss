@@ -1,8 +1,7 @@
-.cow-animal-cat {
+.cow-cat {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 22vh;
-  // align-items: center;
 }
 
 .cow {
@@ -16,21 +15,6 @@
   background: url(../img/cow.svg) no-repeat center center,
     url(../img/chat-to-right.svg) no-repeat center right;
   background-size: contain, 20%;
-}
-.animal {
-  width: 15vw;
-  height: 40%;
-  border: 2px solid black;
-  border-radius: 10%;
-  background: white;
-  text-align: center;
-  font-family: LuckiestGuy;
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  letter-spacing: 1px;
-  align-self: center;
 }
 .cat {
   width: 22vw;
@@ -46,31 +30,34 @@
 }
 
 @media (min-height: 600px) {
-  .cow-animal-cat {
+  .cow-cat {
     height: 18vh;
   }
 }
 
 @media (min-height: 1000px) {
-  .cow-animal-cat {
+  .cow-cat {
     height: 17vh;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1300px) {
   .cow {
-    width: 18vw;
+    width: 20vw;
   }
   .cow--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/cow.svg) no-repeat center center,
+      url(../img/chat-to-right.svg) no-repeat center right;
+    background-size: contain, 18%;
   }
-  // .animal {
-  //   width: 16vw;
-  // }
   .cat {
-    width: 18vw;
+    width: 20vw;
   }
   .cat--chat {
-    width: 18vw;
+    width: 20vw;
+    background: url(../img/cat.svg) no-repeat center center,
+      url(../img/chat-to-left.svg) no-repeat center left;
+    background-size: contain, 18%;
   }
 }
