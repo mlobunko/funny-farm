@@ -1,29 +1,29 @@
 .cow-cat {
   display: flex;
   justify-content: space-around;
-  height: 22vh;
+  height: $height-animal-base;
 }
 
 .cow {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/cow.svg) no-repeat center center;
   background-size: contain;
 }
 
 .cow--chat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/cow.svg) no-repeat center center,
     url(../img/chat-to-right.svg) no-repeat center right;
   background-size: contain, 20%;
 }
 .cat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/cat.svg) no-repeat center center;
   background-size: contain;
 }
 
 .cat--chat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/cat.svg) no-repeat center center,
     url(../img/chat-to-left.svg) no-repeat center left;
   background-size: contain, 20%;
@@ -31,31 +31,31 @@
 
 @media (min-height: 600px) {
   .cow-cat {
-    height: 18vh;
+    height: $height-animal-600;
   }
 }
 
 @media (min-height: 1000px) {
   .cow-cat {
-    height: 17vh;
+    height: $height-animal-1000;
   }
 }
 
 @media (min-width: 1300px) {
   .cow {
-    width: 20vw;
+    width: $width-animal-1300;
   }
   .cow--chat {
-    width: 20vw;
+    width: $width-animal-1300;
     background: url(../img/cow.svg) no-repeat center center,
       url(../img/chat-to-right.svg) no-repeat center right;
     background-size: contain, 18%;
   }
   .cat {
-    width: 20vw;
+    width: $width-animal-1300;
   }
   .cat--chat {
-    width: 20vw;
+    width: $width-animal-1300;
     background: url(../img/cat.svg) no-repeat center center,
       url(../img/chat-to-left.svg) no-repeat center left;
     background-size: contain, 18%;

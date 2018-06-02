@@ -1,42 +1,42 @@
 .duck-sheep-chicken {
   display: flex;
   justify-content: space-evenly;
-  height: 22vh;
+  height: $height-animal-base;
 }
 
 .duck {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/duck.svg) no-repeat center center;
   background-size: contain;
 }
 
 .duck--chat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/duck.svg) no-repeat center center,
     url(../img/chat-to-right.svg) no-repeat center right;
   background-size: contain, 20%;
 }
 .sheep {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/sheep.svg) no-repeat center center;
   background-size: contain;
 }
 
 .sheep--chat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/sheep.svg) no-repeat center center,
     url(../img/chat-to-right.svg) no-repeat center right;
   background-size: contain, 20%;
 }
 
 .chicken {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/chicken.svg) no-repeat center center;
   background-size: contain;
 }
 
 .chicken--chat {
-  width: 22vw;
+  width: $width-animal-base;
   background: url(../img/chicken.svg) no-repeat center center,
     url(../img/chat-to-left.svg) no-repeat center left;
   background-size: contain, 20%;
@@ -44,40 +44,40 @@
 
 @media (min-height: 600px) {
   .duck-sheep-chicken {
-    height: 18vh;
+    height: $height-animal-600;
   }
 }
 
 @media (min-height: 1000px) {
   .duck-sheep-chicken {
-    height: 17vh;
+    height: $height-animal-1000;
   }
 }
 
 @media (min-width: 1300px) {
   .duck {
-    width: 20vw;
+    width: $width-animal-1300;
   }
   .duck--chat {
-    width: 20vw;
+    width: $width-animal-1300;
     background: url(../img/duck.svg) no-repeat center center,
       url(../img/chat-to-right.svg) no-repeat center right;
     background-size: contain, 18%;
   }
   .sheep {
-    width: 20vw;
+    width: $width-animal-1300;
   }
   .sheep--chat {
-    width: 20vw;
+    width: $width-animal-1300;
     background: url(../img/sheep.svg) no-repeat center center,
       url(../img/chat-to-right.svg) no-repeat center right;
     background-size: contain, 18%;
   }
   .chicken {
-    width: 20vw;
+    width: $width-animal-1300;
   }
   .chicken--chat {
-    width: 20vw;
+    width: $width-animal-1300;
     background: url(../img/chicken.svg) no-repeat center center,
       url(../img/chat-to-left.svg) no-repeat center left;
     background-size: contain, 20%;

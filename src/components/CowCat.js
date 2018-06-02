@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { playCatSound, playCowSound } from "../actions/saga";
 
-const CowAndCat = ({
+export const CowCat = ({
   playCatSound,
   playCowSound,
   isCatSoundPlaying,
@@ -26,6 +26,4 @@ const mapStateToProps = state => ({
   isCatSoundPlaying: state.settings.isCatSoundPlaying
 });
 
-export default connect(mapStateToProps, { playCatSound, playCowSound })(
-  CowAndCat
-);
+export default connect(mapStateToProps, { playCatSound, playCowSound })(CowCat);

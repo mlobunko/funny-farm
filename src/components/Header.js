@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { changeIsMusicOn } from "../actions/settings";
 import { changePlayMusic } from "../actions/saga";
 
 export const Header = ({ isMusicOn, changePlayMusic }) => (
