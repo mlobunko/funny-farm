@@ -1,6 +1,6 @@
 {
   "name": "funny-farm",
-  "homepage": "https://mlobunko.github.io/pomodoro-timer/",
+  "homepage": "https://mlobunko.github.io/funny-farm/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,6 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
-    "redux-localstorage": "^0.4.1",
     "redux-saga": "^0.16.0"
   },
   "scripts": {
