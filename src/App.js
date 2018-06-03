@@ -11,6 +11,7 @@ export class App extends React.Component {
       : this.props.landscapeOff();
 
   componentDidMount = () => {
+    this.checkLandscape();
     window.addEventListener("resize", this.checkLandscape);
   };
   render() {
