@@ -5,7 +5,6 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import "normalize.css";
 import "./styles/styles.css";
-import "font-awesome/css/font-awesome.min.css";
 import App from "./App";
 import rootSaga from "./saga/rootSaga";
 import registerServiceWorker from "./registerServiceWorker";
@@ -25,7 +24,7 @@ const store = createStore(
     // statistics: statisticsReducer
   }),
   composeEnhancers(applyMiddleware(sagaMiddleware))
-  // persistState()
+  // // persistState()
 );
 sagaMiddleware.run(rootSaga);
 

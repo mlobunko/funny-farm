@@ -1,27 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
-import {
-  playChickenSound,
-  playDuckSound,
-  playSheepSound
-} from "../actions/saga";
+import { playChickenSound, playDogSound, playDuckSound } from "../actions/saga";
 
-export const DuckSheepChicken = ({
+export const DuckDogChicken = ({
   playChickenSound,
+  playDogSound,
   playDuckSound,
-  playSheepSound,
   isChickenSoundPlaying,
-  isDuckSoundPlaying,
-  isSheepSoundPlaying
+  isDogSoundPlaying,
+  isDuckSoundPlaying
 }) => (
-  <div className="duck-sheep-chicken">
+  <div className="duck-dog-chicken">
     <div
       className={isDuckSoundPlaying ? "duck--chat" : "duck"}
       onClick={playDuckSound}
     />
     <div
-      className={isSheepSoundPlaying ? "sheep--chat" : "sheep"}
-      onClick={playSheepSound}
+      className={isDogSoundPlaying ? "dog--chat" : "dog"}
+      onClick={playDogSound}
     />
     <div
       className={isChickenSoundPlaying ? "chicken--chat" : "chicken"}
@@ -32,12 +28,12 @@ export const DuckSheepChicken = ({
 
 const mapStateToProps = state => ({
   isChickenSoundPlaying: state.settings.isChickenSoundPlaying,
-  isDuckSoundPlaying: state.settings.isDuckSoundPlaying,
-  isSheepSoundPlaying: state.settings.isSheepSoundPlaying
+  isDogSoundPlaying: state.settings.isDogSoundPlaying,
+  isDuckSoundPlaying: state.settings.isDuckSoundPlaying
 });
 
 export default connect(mapStateToProps, {
   playChickenSound,
-  playDuckSound,
-  playSheepSound
-})(DuckSheepChicken);
+  playDogSound,
+  playDuckSound
+})(DuckDogChicken);

@@ -1,5 +1,5 @@
 import { delay } from "redux-saga";
-import { put, call, select, take, fork, takeLatest } from "redux-saga/effects";
+import { put, call, select, take, fork, cancel } from "redux-saga/effects";
 import {
   catSoundPlay,
   chickenSoundPlay,
@@ -39,18 +39,18 @@ export function* toClickedAnimalNull() {
 }
 
 export function* watchClickedAnimal() {
+  let lastTask;
   while (true) {
-    yield takeLatest(
-      [
-        "PLAY_CAT_SOUND",
-        "PLAY_CHICKEN_SOUND",
-        "PLAY_COW_SOUND",
-        "PLAY_DOG_SOUND",
-        "PLAY_DUCK_SOUND",
-        "PLAY_SHEEP_SOUND"
-      ],
-      toClickedAnimalNull
-    );
+    yield take([
+      "PLAY_CAT_SOUND",
+      "PLAY_CHICKEN_SOUND",
+      "PLAY_COW_SOUND",
+      "PLAY_DOG_SOUND",
+      "PLAY_DUCK_SOUND",
+      "PLAY_SHEEP_SOUND"
+    ]);
+    if (lastTask) yield cancel(lastTask);
+    lastTask = yield fork(toClickedAnimalNull);
   }
 }
 
@@ -90,8 +90,8 @@ export function* watchPlayCowSound() {
 export function* watchPlayDogSound() {
   while (true) {
     yield take("PLAY_DOG_SOUND");
-    yield put(dogSoundPlayingTrue());
     yield put(clickedAnimalDog());
+    yield put(dogSoundPlayingTrue());
     yield fork(dogSoundPlay);
     yield call(delay, 1200);
     yield put(dogSoundPlayingFalse());
@@ -127,7 +127,7 @@ export function* watchPlayMusicStart() {
   const {
     settings: { isMusicOn }
   } = yield select();
-  if (isMusicOn) yield call(musicPlay);
+  if (isMusicOn) yield fork(musicPlay);
 }
 
 export function* watchPlayMusicChange() {

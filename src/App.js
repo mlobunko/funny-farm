@@ -3,25 +3,30 @@ import Rotate from "./components/Rotate";
 import Content from "./components/Content";
 import { connect } from "react-redux";
 import { landscapeOn, landscapeOff } from "./actions/settings";
+import { startPlayMusic } from "./actions/saga";
 
 export class App extends React.Component {
   checkLandscape = () =>
-    window.screen.width > window.screen.height
+    document.documentElement.clientWidth > document.documentElement.clientHeight
       ? this.props.landscapeOn()
       : this.props.landscapeOff();
 
   componentDidMount = () => {
+    this.props.startPlayMusic();
     this.checkLandscape();
     window.addEventListener("resize", this.checkLandscape);
   };
   render() {
-    return (
-      <div>
-        <Rotate />
-        <Content />
-      </div>
-    );
+    return <div>{this.props.isLandscape ? <Content /> : <Rotate />}</div>;
   }
 }
 
-export default connect(undefined, { landscapeOn, landscapeOff })(App);
+const mapStateToProps = state => ({
+  isLandscape: state.settings.isLandscape
+});
+
+export default connect(mapStateToProps, {
+  landscapeOn,
+  landscapeOff,
+  startPlayMusic
+})(App);

@@ -1,35 +1,18 @@
 import React from "react";
-import { connect } from "react-redux";
 import Header from "./Header";
 import TouchTheAnimal from "./TouchTheAnimal";
-import CowCat from "./CowCat";
-import Dog from "./Dog";
-import DuckSheepChicken from "./DuckSheepChicken";
-import { startPlayMusic } from "../actions/saga";
+import CowSheepCat from "./CowSheepCat";
+import DuckDogChicken from "./DuckDogChicken";
 
-export class Content extends React.Component {
-  componentDidMount = () => {
-    this.props.startPlayMusic();
-  };
-  render() {
-    return (
-      <div>
-        {this.props.isLandscape ? (
-          <div className="content">
-            <Header />
-            <TouchTheAnimal />
-            <CowCat />
-            <Dog />
-            <DuckSheepChicken />
-          </div>
-        ) : null}
-      </div>
-    );
-  }
-}
+const Content = () => (
+  <div className="content">
+    <Header />
+    <TouchTheAnimal />
+    <div className="animals">
+      <DuckDogChicken />
+      <CowSheepCat />
+    </div>
+  </div>
+);
 
-const mapStateToProps = state => ({
-  isLandscape: state.settings.isLandscape
-});
-
-export default connect(mapStateToProps, { startPlayMusic })(Content);
+export default Content;
