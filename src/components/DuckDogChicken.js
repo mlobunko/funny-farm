@@ -12,14 +12,17 @@ export const DuckDogChicken = ({
 }) => (
   <div className="duck-dog-chicken">
     <div
+      aria-label="play duck sound button"
       className={isDuckSoundPlaying ? "duck--chat" : "duck"}
       onClick={playDuckSound}
     />
     <div
+      aria-label="play dog sound button"
       className={isDogSoundPlaying ? "dog--chat" : "dog"}
       onClick={playDogSound}
     />
     <div
+      aria-label="play rooster sound button"
       className={isChickenSoundPlaying ? "chicken--chat" : "chicken"}
       onClick={playChickenSound}
     />

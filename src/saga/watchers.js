@@ -132,6 +132,7 @@ export function* watchPlayMusicStart() {
 
 export function* watchPlayMusicChange() {
   while (true) {
+    yield call(delay, 5);
     yield take("CHANGE_PLAY_MUSIC");
     yield put(changeIsMusicOn());
     const {

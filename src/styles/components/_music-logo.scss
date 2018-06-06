@@ -28,3 +28,14 @@
     width: 5rem;
   }
 }
+
+@media (min-width: 2000px) {
+  .music-logo--on {
+    width: 8rem;
+    margin-right: 4rem;
+  }
+  .music-logo--off {
+    width: 8rem;
+    margin-right: 4rem;
+  }
+}

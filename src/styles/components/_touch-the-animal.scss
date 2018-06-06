@@ -41,3 +41,13 @@
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   }
 }
+
+@media (min-width: 2000px) {
+  .touch-the-animal {
+    height: 15vh;
+    font-size: 4rem;
+  }
+  .touch-the-animal__clicked-animal {
+    font-size: 7rem;
+  }
+}

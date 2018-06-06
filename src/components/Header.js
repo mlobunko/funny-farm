@@ -10,6 +10,7 @@ export const Header = ({ isMusicOn, changePlayMusic }) => (
     </div>
     <div className="music-logo">
       <div
+        aria-label="turn on and off play music button"
         className={isMusicOn ? "music-logo--on" : "music-logo--off"}
         onClick={changePlayMusic}
       />

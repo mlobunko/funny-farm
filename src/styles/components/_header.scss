@@ -26,3 +26,12 @@
     font-size: 5rem;
   }
 }
+
+@media (min-width: 2000px) {
+  .header {
+    height: 15rem;
+  }
+  .header h1 {
+    font-size: 9rem;
+  }
+}
