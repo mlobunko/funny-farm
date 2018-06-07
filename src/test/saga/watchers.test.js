@@ -1,5 +1,14 @@
 import { delay } from "redux-saga";
-import { put, call, select, take, fork, takeLatest } from "redux-saga/effects";
+import {
+  put,
+  call,
+  select,
+  take,
+  fork,
+  takeLatest,
+  cancel
+} from "redux-saga/effects";
+import { createMockTask } from "redux-saga/utils";
 import {
   catSoundPlay,
   chickenSoundPlay,
@@ -68,20 +77,30 @@ it("should correctly execute toClickedAnimalNull()", () => {
 });
 
 it("should correctly execute watchClickedAnimal()", () => {
+  const lastTask = createMockTask();
   const gen = watchClickedAnimal();
-  expect(gen.next().value).toEqual(
-    takeLatest(
-      [
-        "PLAY_CAT_SOUND",
-        "PLAY_CHICKEN_SOUND",
-        "PLAY_COW_SOUND",
-        "PLAY_DOG_SOUND",
-        "PLAY_DUCK_SOUND",
-        "PLAY_SHEEP_SOUND"
-      ],
-      toClickedAnimalNull
-    )
+  expect(gen.next(lastTask).value).toEqual(
+    take([
+      "PLAY_CAT_SOUND",
+      "PLAY_CHICKEN_SOUND",
+      "PLAY_COW_SOUND",
+      "PLAY_DOG_SOUND",
+      "PLAY_DUCK_SOUND",
+      "PLAY_SHEEP_SOUND"
+    ])
   );
+  expect(gen.next().value).toEqual(fork(toClickedAnimalNull));
+  expect(gen.next(lastTask).value).toEqual(
+    take([
+      "PLAY_CAT_SOUND",
+      "PLAY_CHICKEN_SOUND",
+      "PLAY_COW_SOUND",
+      "PLAY_DOG_SOUND",
+      "PLAY_DUCK_SOUND",
+      "PLAY_SHEEP_SOUND"
+    ])
+  );
+  expect(gen.next().value).toEqual(cancel(lastTask));
 });
 
 it("should correctly execute watchPlayCatSound()", () => {
@@ -159,7 +178,7 @@ it("should correctly execute watchPlayMusicStart() if isMusicOn true", () => {
   const gen = watchPlayMusicStart();
   expect(gen.next().value).toEqual(take("START_PLAY_MUSIC"));
   expect(gen.next().value).toEqual(select());
-  expect(gen.next(state).value).toEqual(call(musicPlay));
+  expect(gen.next(state).value).toEqual(fork(musicPlay));
   expect(gen.next().done).toEqual(true);
 });
 
@@ -185,9 +204,11 @@ it("should correctly execute watchPlayMusicChange() if isMusicOn false", () => {
   };
   const gen = watchPlayMusicChange();
   expect(gen.next().value).toEqual(take("CHANGE_PLAY_MUSIC"));
+  expect(gen.next().value).toEqual(call(delay, 5));
   expect(gen.next().value).toEqual(put(changeIsMusicOn()));
   expect(gen.next().value).toEqual(select());
   expect(gen.next(state).value).toEqual(fork(musicStop));
+  expect(gen.next().done).toEqual(false);
 });
 
 it("should correctly execute watchPlayMusicChange() if isMusicOn true", () => {
@@ -199,7 +220,9 @@ it("should correctly execute watchPlayMusicChange() if isMusicOn true", () => {
   };
   const gen = watchPlayMusicChange();
   expect(gen.next().value).toEqual(take("CHANGE_PLAY_MUSIC"));
+  expect(gen.next().value).toEqual(call(delay, 5));
   expect(gen.next().value).toEqual(put(changeIsMusicOn()));
   expect(gen.next().value).toEqual(select());
   expect(gen.next(state).value).toEqual(fork(musicPlay));
+  expect(gen.next().done).toEqual(false);
 });

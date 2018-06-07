@@ -1,14 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render DuckSheepChicken component correctly 1`] = `
+exports[`should render correctly CowCat component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    playChickenSound={[Function]}
-    playDuckSound={[Function]}
-    playSheepSound={[Function]}
-/>,
+  Symbol(enzyme.__unrendered__): <Unknown />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,19 +19,22 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="duck"
-          onClick={[Function]}
+          aria-label="play cow sound button"
+          className="cow"
+          onClick={undefined}
 />,
         <div
+          aria-label="play sheep sound button"
           className="sheep"
-          onClick={[Function]}
+          onClick={undefined}
 />,
         <div
-          className="chicken"
-          onClick={[Function]}
+          aria-label="play cat sound button"
+          className="cat"
+          onClick={undefined}
 />,
       ],
-      "className": "duck-sheep-chicken",
+      "className": "cow-sheep-cat",
     },
     "ref": null,
     "rendered": Array [
@@ -44,8 +43,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "duck",
-          "onClick": [Function],
+          "aria-label": "play cow sound button",
+          "className": "cow",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -56,8 +56,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "aria-label": "play sheep sound button",
           "className": "sheep",
-          "onClick": [Function],
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -68,8 +69,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "chicken",
-          "onClick": [Function],
+          "aria-label": "play cat sound button",
+          "className": "cat",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -86,19 +88,22 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="duck"
-            onClick={[Function]}
+            aria-label="play cow sound button"
+            className="cow"
+            onClick={undefined}
 />,
           <div
+            aria-label="play sheep sound button"
             className="sheep"
-            onClick={[Function]}
+            onClick={undefined}
 />,
           <div
-            className="chicken"
-            onClick={[Function]}
+            aria-label="play cat sound button"
+            className="cat"
+            onClick={undefined}
 />,
         ],
-        "className": "duck-sheep-chicken",
+        "className": "cow-sheep-cat",
       },
       "ref": null,
       "rendered": Array [
@@ -107,8 +112,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "duck",
-            "onClick": [Function],
+            "aria-label": "play cow sound button",
+            "className": "cow",
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -119,8 +125,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "aria-label": "play sheep sound button",
             "className": "sheep",
-            "onClick": [Function],
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -131,8 +138,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "chicken",
-            "onClick": [Function],
+            "aria-label": "play cat sound button",
+            "className": "cat",
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": null,

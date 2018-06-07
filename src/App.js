@@ -8,7 +8,8 @@ import { startPlayMusic } from "./actions/saga";
 export class App extends React.Component {
   checkLandscape = () =>
     document.documentElement.clientWidth > document.documentElement.clientHeight
-      ? this.props.landscapeOn()
+      ? // window.innerWidth > window.innerHeight
+        this.props.landscapeOn()
       : this.props.landscapeOff();
 
   componentDidMount = () => {
@@ -25,8 +26,11 @@ const mapStateToProps = state => ({
   isLandscape: state.settings.isLandscape
 });
 
-export default connect(mapStateToProps, {
-  landscapeOn,
-  landscapeOff,
-  startPlayMusic
-})(App);
+export default connect(
+  mapStateToProps,
+  {
+    landscapeOn,
+    landscapeOff,
+    startPlayMusic
+  }
+)(App);

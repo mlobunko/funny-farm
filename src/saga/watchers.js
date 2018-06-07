@@ -90,8 +90,8 @@ export function* watchPlayCowSound() {
 export function* watchPlayDogSound() {
   while (true) {
     yield take("PLAY_DOG_SOUND");
-    yield put(clickedAnimalDog());
     yield put(dogSoundPlayingTrue());
+    yield put(clickedAnimalDog());
     yield fork(dogSoundPlay);
     yield call(delay, 1200);
     yield put(dogSoundPlayingFalse());

@@ -1,18 +1,18 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { DuckSheepChicken } from "../../components/DuckSheepChicken";
+import { DuckDogChicken } from "../../components/DuckDogChicken";
 import {
   playChickenSound,
-  playDuckSound,
-  playSheepSound
+  playDogSound,
+  playDuckSound
 } from "../../actions/saga";
 
 it("should render DuckSheepChicken component correctly", () => {
   const wrapper = shallow(
-    <DuckSheepChicken
+    <DuckDogChicken
       playChickenSound={playChickenSound}
+      playDogSound={playDogSound}
       playDuckSound={playDuckSound}
-      playSheepSound={playSheepSound}
     />
   );
   expect(wrapper).toMatchSnapshot();
@@ -21,10 +21,10 @@ it("should render DuckSheepChicken component correctly", () => {
 it("should call playChickenSound on button click", () => {
   const playChickenSound = jest.fn();
   const wrapper = shallow(
-    <DuckSheepChicken
+    <DuckDogChicken
       playChickenSound={playChickenSound}
+      playDogSound={playDogSound}
       playDuckSound={playDuckSound}
-      playSheepSound={playSheepSound}
     />
   );
   wrapper.find(".chicken").simulate("click");
@@ -34,25 +34,25 @@ it("should call playChickenSound on button click", () => {
 it("should call playDuckSound on button click", () => {
   const playDuckSound = jest.fn();
   const wrapper = shallow(
-    <DuckSheepChicken
+    <DuckDogChicken
       playChickenSound={playChickenSound}
+      playDogSound={playDogSound}
       playDuckSound={playDuckSound}
-      playSheepSound={playSheepSound}
     />
   );
   wrapper.find(".duck").simulate("click");
   expect(playDuckSound).toHaveBeenCalledTimes(1);
 });
 
-it("should call playSheepSound on button click", () => {
-  const playSheepSound = jest.fn();
+it("should call playDogSound on button click", () => {
+  const playDogSound = jest.fn();
   const wrapper = shallow(
-    <DuckSheepChicken
+    <DuckDogChicken
       playChickenSound={playChickenSound}
       playDuckSound={playDuckSound}
-      playSheepSound={playSheepSound}
+      playDogSound={playDogSound}
     />
   );
-  wrapper.find(".sheep").simulate("click");
-  expect(playSheepSound).toHaveBeenCalledTimes(1);
+  wrapper.find(".dog").simulate("click");
+  expect(playDogSound).toHaveBeenCalledTimes(1);
 });
