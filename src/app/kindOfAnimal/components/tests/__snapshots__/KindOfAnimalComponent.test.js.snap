@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders StyledAnimation 1`] = `
+<Fragment>
+  <styled.div>
+    Touch The Animal
+  </styled.div>
+</Fragment>
+`;
+
+exports[`render renders StyledKind 1`] = `
+<Fragment>
+  <styled.div>
+    pig
+  </styled.div>
+</Fragment>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders content 1`] = `
+<div>
+  <Connect(ContentContainer) />
+</div>
+`;
+
+exports[`render renders rotate 1`] = `
+<div>
+  <Component />
+</div>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledAnimals renders correctly 1`] = `
+<div
+  className="sc-ifAKCX jOcMuq"
+/>
+`;
+
+exports[`StyledContentComponent renders correctly 1`] = `
+<div
+  className="sc-bxivhb bfBbdN"
+/>
+`;
+
+exports[`StyledImageRotate renders correctly 1`] = `
+<div
+  className="sc-bwzfXH jLakDY"
+/>
+`;
+
+exports[`StyledRotate renders correctly 1`] = `
+<div
+  className="sc-htpNat eJGrvs"
+/>
+`;
+
+exports[`StyledRow renders correctly with props.top 1`] = `
+<div
+  className="sc-bdVaJa dRvlCK"
+/>
+`;
+
+exports[`StyledRow renders correctly without props.top 1`] = `
+<div
+  className="sc-bdVaJa fJksTZ"
+/>
+`;

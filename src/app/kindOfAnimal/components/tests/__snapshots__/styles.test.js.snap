@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledAnimation renders correctly 1`] = `
+<div
+  className="sc-bwzfXH lozvSP"
+/>
+`;
+
+exports[`StyledKind renders correctly 1`] = `
+<div
+  className="sc-bdVaJa dtKJJt"
+/>
+`;

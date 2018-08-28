@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledDogComponent renders animal 1`] = `
+<div
+  aria-label="play dog sound button"
+  className="sc-bdVaJa jKWUBw"
+/>
+`;
+
+exports[`StyledDogComponent renders animalChat 1`] = `
+<div
+  aria-label="play dog sound button"
+  className="sc-bdVaJa WgoNZ"
+/>
+`;

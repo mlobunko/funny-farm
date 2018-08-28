@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledH1 renders correctly 1`] = `
+<h1
+  className="sc-htpNat ilTFlc"
+/>
+`;
+
+exports[`StyledHeaderComponent renders correctly 1`] = `
+<div
+  className="sc-bdVaJa ghFfAn"
+/>
+`;
+
+exports[`StyledLeft renders correctly 1`] = `
+<div
+  className="sc-bwzfXH bhIXUs"
+/>
+`;
+
+exports[`StyledMusicIcon renders soundOff 1`] = `
+<div
+  aria-label="toggle play music"
+  className="sc-ifAKCX dDWREN"
+/>
+`;
+
+exports[`StyledMusicIcon renders soundOn 1`] = `
+<div
+  aria-label="toggle play music"
+  className="sc-ifAKCX dHXZFX"
+/>
+`;
+
+exports[`StyledRight renders correctly 1`] = `
+<div
+  className="sc-bxivhb kPTFaH"
+/>
+`;

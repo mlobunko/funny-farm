@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledRoosterComponent renders animal 1`] = `
+<div
+  aria-label="play rooster sound button"
+  className="sc-bdVaJa jKWUBw"
+/>
+`;
+
+exports[`StyledRoosterComponent renders animalChat 1`] = `
+<div
+  aria-label="play rooster sound button"
+  className="sc-bdVaJa WgoNZ"
+/>
+`;
