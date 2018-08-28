@@ -8,7 +8,7 @@ exports[`StyledH1 renders correctly 1`] = `
 
 exports[`StyledHeaderComponent renders correctly 1`] = `
 <div
-  className="sc-bdVaJa ghFfAn"
+  className="sc-bdVaJa kSJZzM"
 />
 `;
 
@@ -34,6 +34,6 @@ exports[`StyledMusicIcon renders soundOn 1`] = `
 
 exports[`StyledRight renders correctly 1`] = `
 <div
-  className="sc-bxivhb kPTFaH"
+  className="sc-bxivhb cVPFN"
 />
 `;
