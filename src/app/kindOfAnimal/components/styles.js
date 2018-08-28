@@ -37,6 +37,7 @@ const blinkingText = keyframes`
 
 export const StyledAnimation = styled.div`
   ${commonStyles};
+  font-size: 1.5rem;
   animation-name: ${blinkingText};
   animation-duration: 1s;
   animation-iteration-count: infinite;

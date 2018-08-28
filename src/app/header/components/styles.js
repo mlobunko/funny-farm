@@ -5,7 +5,7 @@ import soundOff from '../images/sound-off.svg';
 export const StyledHeaderComponent = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 6rem;
+  height: 4rem;
   padding-top: 2rem;
 
   @media (min-height: 600px) {
@@ -42,7 +42,6 @@ export const StyledH1 = styled.h1`
 `;
 
 export const StyledRight = styled.div`
-  height: 100%;
   flex: 1 0;
   display: flex;
   justify-content: flex-end;
