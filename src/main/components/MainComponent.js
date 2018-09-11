@@ -9,6 +9,7 @@ export const MainComponent = ({ isLandscape }) => (
 );
 
 export default MainComponent;
+MainComponent.displayName = 'Main';
 
 MainComponent.propTypes = {
   isLandscape: PropTypes.bool

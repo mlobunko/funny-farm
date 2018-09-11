@@ -9,12 +9,25 @@ injectGlobal`
   }
 `;
 
-export const StyledRow = styled.div`
-  margin-top: ${props => props.top && '1.6rem'};
-  height: 18vh;
+export const StyledAnimals = styled.div`
+  min-height: 70vh;
   display: flex;
-  justify-content: ${props => (props.top ? 'space-evenly' : 'center')};
+  flex-direction: column;
+  justify-content: flex-end;
 `;
+StyledAnimals.displayName = 'StyledAnimals';
+
+export const StyledContentComponent = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url(${imageBackground}) no-repeat center center;
+  background-size: cover;
+  @font-face {
+    font-family: LuckiestGuy;
+    src: url(${fontLuckiestGuy});
+  }
+`;
+StyledContentComponent.displayName = 'StyledContentComponent';
 
 export const StyledImageRotate = styled.div`
   width: 15rem;
@@ -22,6 +35,7 @@ export const StyledImageRotate = styled.div`
   background: url(${imageRotate}) no-repeat center center;
   background-size: cover;
 `;
+StyledImageRotate.displayName = 'StyledImageRotate';
 
 const rotate90deg = keyframes`
   0% {
@@ -44,21 +58,12 @@ export const StyledRotate = styled.div`
   animation: ${rotate90deg} 1.5s;
   animation-iteration-count: infinite;
 `;
+StyledRotate.displayName = 'StyledRotate';
 
-export const StyledContentComponent = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
-  background: url(${imageBackground}) no-repeat center center;
-  background-size: cover;
-  @font-face {
-    font-family: LuckiestGuy;
-    src: url(${fontLuckiestGuy});
-  }
-`;
-
-export const StyledAnimals = styled.div`
-  min-height: 70vh;
+export const StyledRow = styled.div`
+  margin-top: ${props => props.top && '1.6rem'};
+  height: 18vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: ${props => (props.top ? 'space-evenly' : 'center')};
 `;
+StyledRow.displayName = 'StyledRow';

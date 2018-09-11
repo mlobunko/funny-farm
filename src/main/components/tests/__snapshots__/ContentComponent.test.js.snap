@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render renders correctly 1`] = `
-<styled.div>
+<StyledContentComponent>
   <Connect(Component) />
   <Connect(Component) />
-  <styled.div>
-    <styled.div
+  <StyledAnimals>
+    <StyledRow
       top={true}
     >
       <Connect(Component) />
       <Connect(Component) />
       <Connect(Component) />
-    </styled.div>
-    <styled.div>
+    </StyledRow>
+    <StyledRow>
       <Connect(Component) />
       <Connect(Component) />
       <Connect(Component) />
-    </styled.div>
-  </styled.div>
-</styled.div>
+    </StyledRow>
+  </StyledAnimals>
+</StyledContentComponent>
 `;

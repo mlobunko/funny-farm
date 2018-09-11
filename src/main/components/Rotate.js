@@ -9,3 +9,4 @@ export const Rotate = () => (
 );
 
 export default Rotate;
+Rotate.displayName = 'Rotate';

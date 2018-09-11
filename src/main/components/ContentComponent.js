@@ -30,3 +30,4 @@ export const ContentComponent = () => (
 );
 
 export default ContentComponent;
+ContentComponent.displayName = 'Content';

@@ -2,36 +2,36 @@
 
 exports[`StyledAnimals renders correctly 1`] = `
 <div
-  className="sc-ifAKCX jOcMuq"
+  className="sc-bdVaJa dMJLPt"
 />
 `;
 
 exports[`StyledContentComponent renders correctly 1`] = `
 <div
-  className="sc-bxivhb bfBbdN"
+  className="sc-bwzfXH gUYEbA"
 />
 `;
 
 exports[`StyledImageRotate renders correctly 1`] = `
 <div
-  className="sc-bwzfXH jLakDY"
+  className="sc-htpNat dbdumx"
 />
 `;
 
 exports[`StyledRotate renders correctly 1`] = `
 <div
-  className="sc-htpNat eJGrvs"
+  className="sc-bxivhb jqtXnT"
 />
 `;
 
 exports[`StyledRow renders correctly with props.top 1`] = `
 <div
-  className="sc-bdVaJa dRvlCK"
+  className="sc-ifAKCX kLKjYd"
 />
 `;
 
 exports[`StyledRow renders correctly without props.top 1`] = `
 <div
-  className="sc-bdVaJa fJksTZ"
+  className="sc-ifAKCX jlNCTq"
 />
 `;
