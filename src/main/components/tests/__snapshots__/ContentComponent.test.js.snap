@@ -8,14 +8,14 @@ exports[`render renders correctly 1`] = `
     <StyledRow
       top={true}
     >
-      <Connect(Component) />
-      <Connect(Component) />
-      <Connect(Component) />
+      <Connect(DuckComponent) />
+      <Connect(DogComponent) />
+      <Connect(RoosterComponent) />
     </StyledRow>
     <StyledRow>
-      <Connect(Component) />
-      <Connect(Component) />
-      <Connect(Component) />
+      <Connect(CowComponent) />
+      <Connect(SheepComponent) />
+      <Connect(CatComponent) />
     </StyledRow>
   </StyledAnimals>
 </StyledContentComponent>

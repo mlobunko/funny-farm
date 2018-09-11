@@ -13,3 +13,4 @@ export const StyledCowComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledCowComponent.displayName = 'StyledCowComponent';

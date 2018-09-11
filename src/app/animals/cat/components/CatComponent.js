@@ -8,6 +8,7 @@ export const CatComponent = ({ isPlaying, playSound }) => (
 );
 
 export default CatComponent;
+CatComponent.displayName = 'CatComponent';
 
 CatComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

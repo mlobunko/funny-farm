@@ -13,3 +13,4 @@ export const StyledDogComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledDogComponent.displayName = 'StyledDogComponent';

@@ -8,6 +8,7 @@ export const DogComponent = ({ isPlaying, playSound }) => (
 );
 
 export default DogComponent;
+DogComponent.displayName = 'DogComponent';
 
 DogComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

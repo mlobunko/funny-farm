@@ -8,6 +8,7 @@ export const DuckComponent = ({ isPlaying, playSound }) => (
 );
 
 export default DuckComponent;
+DuckComponent.displayName = 'DuckComponent';
 
 DuckComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

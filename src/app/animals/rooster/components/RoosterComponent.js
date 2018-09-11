@@ -8,6 +8,7 @@ export const RoosterComponent = ({ isPlaying, playSound }) => (
 );
 
 export default RoosterComponent;
+RoosterComponent.displayName = 'RoosterComponent';
 
 RoosterComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

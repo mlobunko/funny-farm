@@ -13,3 +13,4 @@ export const StyledSheepComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledSheepComponent.displayName = 'StyledSheepComponent';

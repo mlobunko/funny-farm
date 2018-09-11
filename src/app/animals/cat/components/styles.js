@@ -13,3 +13,4 @@ export const StyledCatComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledCatComponent.displayName = 'StyledCatComponent';

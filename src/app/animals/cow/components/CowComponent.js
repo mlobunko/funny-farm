@@ -8,6 +8,7 @@ export const CowComponent = ({ isPlaying, playSound }) => (
 );
 
 export default CowComponent;
+CowComponent.displayName = 'CowComponent';
 
 CowComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

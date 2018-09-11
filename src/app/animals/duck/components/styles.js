@@ -13,3 +13,4 @@ export const StyledDuckComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledDuckComponent.displayName = 'StyledDuckComponent';

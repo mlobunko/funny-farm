@@ -8,6 +8,7 @@ export const SheepComponent = ({ isPlaying, playSound }) => (
 );
 
 export default SheepComponent;
+SheepComponent.displayName = 'SheepComponent';
 
 SheepComponent.propTypes = {
   isPlaying: PropTypes.bool.isRequired,

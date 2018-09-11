@@ -13,3 +13,4 @@ export const StyledRoosterComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+StyledRoosterComponent.displayName = 'StyledRoosterComponent';
