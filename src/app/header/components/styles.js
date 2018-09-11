@@ -2,26 +2,6 @@ import styled from 'styled-components';
 import soundOn from '../images/sound-on.svg';
 import soundOff from '../images/sound-off.svg';
 
-export const StyledHeaderComponent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  height: 4rem;
-  padding-top: 2rem;
-
-  @media (min-height: 600px) {
-    height: 8rem;
-  }
-  @media (min-width: 2000px) {
-    height: 15rem;
-  }
-`;
-
-export const StyledLeft = styled.div`
-  flex: 1 0;
-  width: 1rem;
-  height: 100%;
-`;
-
 export const StyledH1 = styled.h1`
   font-size: 3rem;
   margin: 0;
@@ -40,12 +20,29 @@ export const StyledH1 = styled.h1`
     font-size: 9rem;
   }
 `;
+StyledH1.displayName = 'StyledH1';
 
-export const StyledRight = styled.div`
-  flex: 1 0;
+export const StyledHeaderComponent = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  height: 4rem;
+  padding-top: 2rem;
+
+  @media (min-height: 600px) {
+    height: 8rem;
+  }
+  @media (min-width: 2000px) {
+    height: 15rem;
+  }
 `;
+StyledHeaderComponent.displayName = 'StyledHeaderComponent';
+
+export const StyledLeft = styled.div`
+  flex: 1 0;
+  width: 1rem;
+  height: 100%;
+`;
+StyledLeft.displayName = 'StyledLeft';
 
 export const StyledMusicIcon = styled.div.attrs({
   'aria-label': 'toggle play music'
@@ -68,5 +65,11 @@ export const StyledMusicIcon = styled.div.attrs({
     margin-right: 4rem;
   }
 `;
-
 StyledMusicIcon.displayName = 'StyledMusicIcon';
+
+export const StyledRight = styled.div`
+  flex: 1 0;
+  display: flex;
+  justify-content: flex-end;
+`;
+StyledRight.displayName = 'StyledRight';

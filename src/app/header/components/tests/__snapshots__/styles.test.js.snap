@@ -2,38 +2,38 @@
 
 exports[`StyledH1 renders correctly 1`] = `
 <h1
-  className="sc-htpNat ilTFlc"
+  className="sc-bdVaJa FZjlp"
 />
 `;
 
 exports[`StyledHeaderComponent renders correctly 1`] = `
 <div
-  className="sc-bdVaJa kSJZzM"
+  className="sc-bwzfXH fHzpjp"
 />
 `;
 
 exports[`StyledLeft renders correctly 1`] = `
 <div
-  className="sc-bwzfXH bhIXUs"
+  className="sc-htpNat kNeozb"
 />
 `;
 
 exports[`StyledMusicIcon renders soundOff 1`] = `
 <div
   aria-label="toggle play music"
-  className="sc-ifAKCX dDWREN"
+  className="sc-bxivhb iBnIJv"
 />
 `;
 
 exports[`StyledMusicIcon renders soundOn 1`] = `
 <div
   aria-label="toggle play music"
-  className="sc-ifAKCX dHXZFX"
+  className="sc-bxivhb ctvzuZ"
 />
 `;
 
 exports[`StyledRight renders correctly 1`] = `
 <div
-  className="sc-bxivhb cVPFN"
+  className="sc-ifAKCX eYtzkY"
 />
 `;

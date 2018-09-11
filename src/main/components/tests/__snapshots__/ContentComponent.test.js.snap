@@ -2,7 +2,7 @@
 
 exports[`render renders correctly 1`] = `
 <StyledContentComponent>
-  <Connect(Component) />
+  <Connect(HeaderComponent) />
   <Connect(KindOfAnimalComponent) />
   <StyledAnimals>
     <StyledRow

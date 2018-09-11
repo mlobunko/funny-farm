@@ -20,6 +20,7 @@ export const HeaderComponent = ({ isMusicOn, toggleMusic }) => (
 );
 
 export default HeaderComponent;
+HeaderComponent.displayName = 'HeaderComponent';
 
 HeaderComponent.prototypes = {
   isMusicOn: PropTypes.bool.isRequired,
