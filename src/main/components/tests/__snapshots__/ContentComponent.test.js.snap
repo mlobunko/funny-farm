@@ -3,7 +3,7 @@
 exports[`render renders correctly 1`] = `
 <StyledContentComponent>
   <Connect(Component) />
-  <Connect(Component) />
+  <Connect(KindOfAnimalComponent) />
   <StyledAnimals>
     <StyledRow
       top={true}

@@ -2,12 +2,12 @@
 
 exports[`StyledAnimation renders correctly 1`] = `
 <div
-  className="sc-bwzfXH jxBZBR"
+  className="sc-bdVaJa iJMKOs"
 />
 `;
 
 exports[`StyledKind renders correctly 1`] = `
 <div
-  className="sc-bdVaJa dtKJJt"
+  className="sc-bwzfXH LgaQd"
 />
 `;

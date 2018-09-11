@@ -2,16 +2,16 @@
 
 exports[`render renders StyledAnimation 1`] = `
 <Fragment>
-  <styled.div>
+  <StyledAnimation>
     Touch The Animal
-  </styled.div>
+  </StyledAnimation>
 </Fragment>
 `;
 
 exports[`render renders StyledKind 1`] = `
 <Fragment>
-  <styled.div>
+  <StyledKind>
     pig
-  </styled.div>
+  </StyledKind>
 </Fragment>
 `;

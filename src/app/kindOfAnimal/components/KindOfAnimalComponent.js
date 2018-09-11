@@ -14,6 +14,7 @@ export const KindOfAnimalComponent = ({ clickedAnimal }) => (
 );
 
 export default KindOfAnimalComponent;
+KindOfAnimalComponent.displayName = 'KindOfAnimalComponent';
 
 KindOfAnimalComponent.proptypes = {
   clickedAnimal: PropTypes.string.isRequired
