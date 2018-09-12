@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import soundOn from '../images/sound-on.svg';
 import soundOff from '../images/sound-off.svg';
 
@@ -66,6 +68,10 @@ export const StyledMusicIcon = styled.div.attrs({
   }
 `;
 StyledMusicIcon.displayName = 'StyledMusicIcon';
+
+StyledMusicIcon.propTypes = {
+  isMusicOn: PropTypes.bool
+};
 
 export const StyledRight = styled.div`
   flex: 1 0;

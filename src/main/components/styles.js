@@ -1,4 +1,6 @@
 import styled, { keyframes, injectGlobal } from 'styled-components';
+import PropTypes from 'prop-types';
+
 import imageRotate from '../images/rotate.svg';
 import imageBackground from '../images/bg.jpg';
 import fontLuckiestGuy from '../fonts/LuckiestGuy.ttf';
@@ -67,3 +69,7 @@ export const StyledRow = styled.div`
   justify-content: ${props => (props.top ? 'space-evenly' : 'center')};
 `;
 StyledRow.displayName = 'StyledRow';
+
+StyledRow.propTypes = {
+  top: PropTypes.bool
+};

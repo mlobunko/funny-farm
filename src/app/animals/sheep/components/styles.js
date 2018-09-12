@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import imageAnimal from '../images/animal.svg';
 import imageAnimalChat from '../images/animal-chat.svg';
 
@@ -13,4 +15,9 @@ export const StyledSheepComponent = styled.div.attrs({
   background-size: contain;
   touch-action: none;
 `;
+
 StyledSheepComponent.displayName = 'StyledSheepComponent';
+
+StyledSheepComponent.propTypes = {
+  chat: PropTypes.bool
+};
