@@ -57,7 +57,6 @@ export const StyledMusicIcon = styled.div.attrs({
       : `url(${soundOff}) no-repeat center center`};
   background-size: contain;
   margin-right: 2rem;
-  cursor: pointer;
   @media (min-width: 900px) {
     width: 5rem;
   }
