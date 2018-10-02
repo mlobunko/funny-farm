@@ -2,7 +2,7 @@
 
 <br />
 
-> Funny Farm is a gamelike application uses voices of animals
+> Funny Farm is a sound application plays voices of animals and shows their kind.
 
 <div align="center">
   
